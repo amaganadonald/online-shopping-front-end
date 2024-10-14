@@ -1,0 +1,36 @@
+<div class="card">
+    <p-splitter 
+        [style]="{ height: '900px' }" 
+        [panelSizes]="[25, 75]" 
+        [minSizes]="[10, 0]" 
+        styleClass="mb-5">
+            <ng-template pTemplate>
+                <div class="col flex align-items-center justify-content-center">
+                    <app-piecharts></app-piecharts>
+                </div>
+            </ng-template>
+            <ng-template pTemplate>
+                <p-splitter layout="vertical" [panelSizes]="[45, 55]">
+                    <ng-template pTemplate>
+                        <div style="flex-grow: 1;" class="flex align-items-center justify-content-center">
+                            <app-barcharts></app-barcharts>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate>
+                        <p-splitter [panelSizes]="[50, 50]">
+                            <ng-template pTemplate>
+                                <div class="col flex align-items-center justify-content-center">
+                                    <app-linecharts></app-linecharts>
+                                </div>
+                            </ng-template>
+                            <ng-template pTemplate>
+                                <div class="col flex align-items-center justify-content-center">
+                                    <app-stackedcharts></app-stackedcharts>
+                                </div>
+                            </ng-template>
+                        </p-splitter>
+                    </ng-template>
+                </p-splitter>
+            </ng-template>
+    </p-splitter>
+</div>
